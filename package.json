@@ -44,7 +44,7 @@
         "lusca": "^1.6.1",
         "mongoose": "^5.7.5",
         "nodemailer": "^6.3.0",
-        "owl-types": "git+ssh://git@github.com/albi34/owl-types.git",
+        "owl-types": "git+https://github.com/albi34/owl-types.git",
         "pug": "^2.0.4",
         "uuid": "^8.3.0",
         "winston": "^3.2.1"

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  owl-backend:
+    build: .
+    environment: 
+      - MONGODB_URI_LOCAL=mongodb://mongo:27017/0
+      - SESSION_SECRET=dockersecret
+      - PORT=8080
+    links:
+      - mongo
+    expose:
+      - "8080"
+    entrypoint: ["npm", "run", "test"]
+    volumes:
+      - .:/usr/src/owl-backend
+      - ./node_modules:/usr/src/owl-backend/node_modules/
+  mongo: 
+    image: mongo:4.2

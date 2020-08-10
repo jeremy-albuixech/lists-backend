@@ -41,3 +41,32 @@ owl-backend/# npm link ../owl-types
 npm run test
 ```
 
+# Local environment with docker
+
+There is a docker-compose file to easily start all services and dependencies. It also mounts the source code folder as a volume to allow nodemon to rebuild on code change. 
+
+```
+docker-compose up
+```
+
+When using docker-compose, the data from Mongo will not be persistent. If you want it to be, you can mount a volume specifically for your mongo instance, eg:
+```
+  mongo: 
+    image: mongo:4.2
+    volumes:
+      - /home/<user>/data:/data/db
+```
+
+For this to take effect, you will need to remove the previous container: 
+```
+docker-compose rm mongo
+```
+
+Testing with docker-compose:
+
+A docker-compose.test.yml file is present to allow unit & integration testing while having connectivity to the mongo instance. 
+To run it: 
+
+```
+docker-compose -f ./docker-compose.test.yml up --exit-code-from owl-backend
+```
