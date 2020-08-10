@@ -16,7 +16,6 @@ export const getLists = async (
   res: Response,
 ): Promise<Response> => {
   try {
-    console.log("got a list GET req")
     const lists = await List.find();
     res.status(200);
     return res.json(lists);
@@ -38,7 +37,6 @@ export const createList = async (
     .isLength({ min: 1 })
     .escape()
     .run(req);
-    console.log("got a list POST req")
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     const apiErrorObj: ApiError = {
