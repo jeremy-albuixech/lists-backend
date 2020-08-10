@@ -1,4 +1,4 @@
-# owl-backend
+# lists-backend
 
 This is a simple Express@Typescript backend to handle creation of lists with items. 
 
@@ -27,12 +27,12 @@ npm run watch
 
 This will reload the server when a file in src/ is modified. 
 
-This uses the shared repository owl-types, to facilitate development you can link it: 
+This uses the shared repository lists-types, to facilitate development you can link it: 
 
 ```
-# git clone git@github.com:albi34/owl-types.git
-# cd owl-backend/
-owl-backend/# npm link ../owl-types
+# git clone git@github.com:albi34/lists-types.git
+# cd lists-backend/
+lists-backend/# npm link ../lists-types
 ```
 
 ## Tests
