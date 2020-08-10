@@ -70,3 +70,14 @@ To run it:
 ```
 docker-compose -f ./docker-compose.test.yml up --exit-code-from owl-backend
 ```
+
+# Terraform
+
+This also includes a simple terraform example, this uses the Google provider to do the following:
+
+- Creates a Google Container Cluster (Kubernetes)
+- Deploys a Nginx and the Owl-backend containers. The owl-backend deployment includes a mongodb sidecar container but without any kind of persistence for now. 
+- Deploys a public service to expose the nginx deployment
+- Deploys a private service (cluster IP) to expose the owl-backend to Nginx. 
+
+There is no SSL setup right now, to add one we could leverage let's encrypt and cert-manager to automatically generate (and rotate) SSL certs for Nginx.
