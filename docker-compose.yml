@@ -1,6 +1,6 @@
 version: '3'
 services:
-  owl-backend:
+  owlbackend:
     build: .
     environment: 
       - MONGODB_URI_LOCAL=mongodb://mongo:27017/0
