@@ -45,7 +45,7 @@
         "mongoose": "^5.7.5",
         "nodemailer": "^6.3.0",
         "owl-types": "git+https://github.com/albi34/owl-types.git",
-        "pug": "^2.0.4",
+        "pug": "^3.0.1",
         "uuid": "^8.3.0",
         "winston": "^3.2.1"
     },
